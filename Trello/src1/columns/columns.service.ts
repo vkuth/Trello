@@ -2,7 +2,6 @@ import { Injectable, Options, NotFoundException } from "@nestjs/common";
 import { ColumnsRepository } from "./columns.repository";
 import { CreateColumnsDto } from "./dto/create-columns.dto";
 import { UpdateColumnsDto } from "./dto/update-columns.dto";
-import { User } from "../users/users.entity";
 
 @Injectable()
 export class ColumnsService {

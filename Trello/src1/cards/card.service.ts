@@ -2,8 +2,6 @@ import { UpdateCardDto } from "./dto/update-card.dto"
 import { CreateCardDto } from "./dto/create-card.dto"
 import { CardRepository } from "./cards.repository"
 import { Injectable, Req, NotFoundException } from "@nestjs/common"
-import RequestWithUser from "../auth/requestWithUser.interface"
-import { Column } from "typeorm"
 
 @Injectable()
 export class CardService {

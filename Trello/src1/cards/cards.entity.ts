@@ -2,7 +2,6 @@ import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany } from "ty
 import { User } from "../users/users.entity";
 import { Columns } from "../columns/columns.entity";
 import { Coment } from "../coments/coment.entity";
-import { IsString, IsInt } from "class-validator";
 
 @Entity()
 export class Card{

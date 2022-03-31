@@ -1,7 +1,6 @@
 import { Controller, Get, Post, Body, Delete, Param, Put, ValidationPipe, Req, UseGuards } from '@nestjs/common';
 import { ColumnsService } from './columns.service';
 import { CreateColumnsDto } from './dto/create-columns.dto';
-import { identity } from 'rxjs';
 import { UpdateColumnsDto } from './dto/update-columns.dto';
 import RequestWithUser from '../auth/requestWithUser.interface';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';

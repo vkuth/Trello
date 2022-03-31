@@ -2,7 +2,7 @@ import { Entity, PrimaryGeneratedColumn, Column, ManyToOne } from "typeorm";
 import { User } from "../users/users.entity";
 import { Columns } from "../columns/columns.entity";
 import { Card } from "../cards/cards.entity";
-import { IsInt, IsString } from "class-validator";
+
 
 @Entity()
 export class Coment{

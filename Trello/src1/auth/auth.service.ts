@@ -1,11 +1,8 @@
 import { Injectable, HttpException, HttpStatus, UnauthorizedException } from '@nestjs/common';
 import { UsersService } from '../users/users.service';
 import { JwtService } from '@nestjs/jwt';
-import { Observable } from 'rxjs';
 import { User } from '../users/users.entity';
 import * as bcrypt from 'bcrypt';
-import { UserRegisterRequetsDto } from '../users/dto/register-user.req.dto';
-import { ConfigService } from '@nestjs/config';
 import { LoginDto } from './dto/login.dto';
 
 @Injectable()
