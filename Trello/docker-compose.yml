@@ -1,0 +1,34 @@
+version: '3.8'
+services:
+  db:
+    container_name: pg_container
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: 132132
+      POSTGRES_DB: test_db
+    ports:
+      - "5432:5432"
+  pgadmin:
+    container_name: pgadmin4_container
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      JWT_SECRET: pineaple
+      JWT_EXPIRATION_TIME: 3600
+    ports:
+      - "5050:80"
+  trello:
+    image: node:12
+    command: bash -c "npm install && npm run start:dev"
+    working_dir:  /app/api
+    depends_on:
+      - db
+    volumes:
+      - ./:/app
+      - /app/node_modules
+    ports:
+      - 3000:3000
